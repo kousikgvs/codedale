@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Outlet } from "react-router-dom";
 
 export default function Chatbot() {
     const [isOpen, setIsOpen] = useState(false);
@@ -12,17 +11,18 @@ export default function Chatbot() {
         const newMessages = [...messages, { sender: "You", text: userInput }];
         setMessages(newMessages);
 
-        try {
-            const response = await fetch('http://localhost:5000/generate', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ prompt: userInput })
-            });
-            const data = await response.json();
-            setMessages([...newMessages, { sender: "Chatbot", text: data.response }]);
-        } catch (error) {
-            setMessages([...newMessages, { sender: "Chatbot", text: error }]);
-        }
+        // try {
+        //     const response = await fetch('http://localhost:5000/generate', {
+        //         method: 'POST',
+        //         headers: { 'Content-Type': 'application/json' },
+        //         body: JSON.stringify({ prompt: userInput })
+        //     });
+        //     const data = await response.json();
+        //     setMessages([...newMessages, { sender: "Chatbot", text: data.response }]);
+        // } catch (error) {
+        //     setMessages([...newMessages, { sender: "Chatbot", text: error }]);
+        // }
+            setMessages([...newMessages, { sender: "Chatbot", text: "Sorry for Inconvience , The LLM isnt hosted" }]);
 
         setUserInput("");
     };

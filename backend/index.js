@@ -14,8 +14,8 @@ dotenv.config({});
 const PORT = process.env.PORT;
 
 app.use(cors({
-    origin: "http://localhost:5173", // Replace "*" with the exact frontend URL
-    credentials: true, // Allow cookies and authentication headers
+    origin: "https://codedale.onrender.com/",
+    credentials: true, 
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"]
 }));

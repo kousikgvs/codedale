@@ -16,7 +16,7 @@ const SignupForm = () => {
             // Log the values before sending the request
             console.log("Values to be sent:", values);
 
-            const response = await fetch("http://localhost:8080/users/register", {
+            const response = await fetch("https://codedale.onrender.com/users/register", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json", // Ensure the correct Content-Type header

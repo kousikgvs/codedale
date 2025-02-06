@@ -20,7 +20,7 @@ const Login = () => {
 
     const handleSubmit = async (values, { setSubmitting }) => {
         try {
-            const response = await fetch("http://localhost:8080/users/login", {
+            const response = await fetch("https://codedale.onrender.com/users/login", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

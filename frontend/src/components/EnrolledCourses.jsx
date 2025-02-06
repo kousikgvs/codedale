@@ -14,7 +14,7 @@ const EnrolledCourses = () => {
                     throw new Error("Authentication token is missing.");
                 }
 
-                const response = await fetch('http://localhost:8080/users/fetchenrolled', {
+                const response = await fetch('https://codedale.onrender.com/users/fetchenrolled', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
