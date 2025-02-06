@@ -1,6 +1,6 @@
 import express from "express";
 import { getOtherUsers, login, logout, register } from "../controllers/userController.js";
-import isAuthenticated from "../middleware/isAuthenticated.js";
+import {isAuthenticated} from "../Middleware/isAuthenticated.js";
 import dotenv from "dotenv"
 import { addEnrollment } from "../controllers/userController.js";
 import { getEnrolledData } from "../controllers/userController.js";
