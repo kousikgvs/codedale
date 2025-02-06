@@ -8,7 +8,7 @@ import {
     addcourses
 } from "../controllers/courseController.js";
 // import isAuthenticated from "../middleware/isAuthenticated.js";
-import isAuthAdmin from "../middleware/isAuthAdmin.js";
+import isAuthAdmin from "../Middleware/isAuthAdmin.js";
 const router = express.Router();
 
 router.get("/getcourse", getCourses);
