@@ -28,7 +28,7 @@ const UserDashboard = () => {
             setCourses(storedCourses)
         }
         
-        fetch("http://localhost:8080/course/getcourse")
+        fetch("https://codedale.onrender.com/course/getcourse")
             .then((response) => response.json())
             .then((data) => {
                 console.log(data.data);
@@ -66,7 +66,7 @@ const UserDashboard = () => {
                 throw new Error("Authentication token is missing.");
             }
 
-            const response = await fetch('http://localhost:8080/users/enroll/', {
+            const response = await fetch('https://codedale.onrender.com/users/enroll/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
